@@ -1,0 +1,16 @@
+import { ui5, ui5Fixture, ui5Launchpad, ui5Test } from "ui5-testcafe-selector-utils";
+import productDemo from "../pages/productDemo";
+
+ui5Fixture('Startseite', "SAP", "https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/cart/webapp/index.html?sap-ui-theme=sap_fiori_3");
+
+ui5Test('Product-Demo', 'Testcase-1', async u => {
+    await u.expect(productDemo.masterPage.productCatList).tableLength().greater(0, "Initially the product-list must be filled");
+
+    await u.typeText(productDemo.masterPage.searchfield, "Flat Basic");
+
+    const data = await productDemo.masterPage.productList.data();
+
+    await u.expectValue(data.tableData.data[0].ProductId).equal('HT-1035', "There is only one product with Flat-Basic - this should be found");
+    await u.expectElement(productDemo.masterPage.productList, (e) => e.tableData.data[0].ProductId).equal("HT-1035");
+    await u.expect(productDemo.masterPage.productList).tableLength().equal(1);
+}); 

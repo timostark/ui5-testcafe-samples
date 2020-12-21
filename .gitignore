@@ -1,0 +1,6 @@
+/e2e_test/node_modules
+/e2e_test/reports
+/e2e_test/artifacts
+/int_test/node_modules
+/int_test/reports
+/int_test/artifacts

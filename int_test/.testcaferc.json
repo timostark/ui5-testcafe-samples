@@ -1,0 +1,24 @@
+{
+    "browsers": "chrome --start-maximized",
+    "selectorTimeout": 60000,
+    "pageLoadTimeout": 20000,
+    "assertionTimeout": 20000,
+    "disableMultipleWindows": true,
+    "stopOnFirstFail": false,
+    "skipJsErrors": true,
+    "screenshots": {
+        "path": "webapp/test/testcafe/artifacts/screenshots"
+    },
+    "reporter": [
+        {
+            "name": "spec"
+        },
+        {
+            "name": "ui5-coverage"
+        },
+        {
+            "name": "xunit",
+            "output": "webapp/test/testcafe/artifacts/report.xml"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "coverage": {
+        "outDir": "artifacts/coverage",
+        "type": "html"
+    }
+}

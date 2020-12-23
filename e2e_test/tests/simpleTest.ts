@@ -1,9 +1,9 @@
-import { ui5, ui5Fixture, ui5Launchpad, ui5Test } from "ui5-testcafe-selector-utils";
+import { ui5Fixture, ui5Test } from "ui5-testcafe-selector-utils";
 import productDemo from "../pages/productDemo";
 
-ui5Fixture('Startseite', "SAP", "https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/cart/webapp/index.html?sap-ui-theme=sap_fiori_3");
+ui5Fixture("Startseite", "https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/cart/webapp/index.html?sap-ui-theme=sap_fiori_3");
 
-ui5Test('Product-Demo', 'Testcase-1', async u => {
+ui5Test('Product-Demo', async u => {
     await u.expect(productDemo.masterPage.productCatList).tableLength().greater(0, "Initially the product-list must be filled");
 
     await u.typeText(productDemo.masterPage.searchfield, "Flat Basic");

@@ -8,12 +8,12 @@
   },
   "devDependencies": {
     "testcafe": "1.9.4",
-    "testcafe-reporter-ui5-coverage": "0.0.4",
+    "testcafe-reporter-ui5-coverage": "0.0.6",
     "testcafe-reporter-xunit": "^2.1.0",
     "typescript": "^4.0.3",
     "ui5-middleware-simpleproxy": "^0.4.1",
     "ui5-middleware-testcafe-coverage": "0.0.2",
-    "ui5-testcafe-selector-utils": "0.0.105"
+    "ui5-testcafe-selector-utils": "0.0.134"
   },
   "dependencies": {
     "@ui5/cli": "^2.4.5"

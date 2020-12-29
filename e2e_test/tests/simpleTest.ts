@@ -10,7 +10,7 @@ ui5Test('Product-Demo', async u => {
 
     const data = await productDemo.masterPage.productList.data();
 
-    await u.expectValue(data.tableData.data[0].ProductId).equal('HT-1035', "There is only one product with Flat-Basic - this should be found");
-    await u.expectElement(productDemo.masterPage.productList, (e) => e.tableData.data[0].ProductId).equal("HT-1035");
+    await u.expectAny(data.tableData.data[0].ProductId).equal('HT-1035', "There is only one product with Flat-Basic - this should be found");
+    await u.expect(productDemo.masterPage.productList).dynamic((e) => e.tableData.data[0].ProductId).equal("HT-1035");
     await u.expect(productDemo.masterPage.productList).tableLength().equal(1);
 }); 

@@ -12,13 +12,6 @@
     "reporter": [
         {
             "name": "spec"
-        },
-        {
-            "name": "ui5-coverage"
-        },
-        {
-            "name": "xunit",
-            "output": "artifacts/report.xml"
         }
     ]
 }

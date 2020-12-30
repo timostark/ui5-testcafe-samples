@@ -1,0 +1,15 @@
+{
+    "coverage": {
+        "enabled": true,
+        "log": true,
+        "basePath": "/test-resources/sap/m/demokit/cart/webapp",
+        "type": "html",
+        "debugComponents": [
+            "sap/ui/demo/cart"
+        ],
+        "includePaths": [],
+        "excludePaths": []
+    },
+    "firstSelectorTimeout": 60000,
+    "traceSelectorOnFailure": true
+}

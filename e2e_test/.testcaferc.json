@@ -9,6 +9,11 @@
     "screenshots": {
         "path": "artifacts/screenshots"
     },
+    "videoPath": "artifacts/videos",
+    "videoOptions": {
+        "pathPattern": "${TEST}_${FILE_INDEX}",
+        "ffmpegPath": "C:/Tools/ffmpeg/bin/ffmpeg.exe"
+    },
     "reporter": [
         {
             "name": "spec"

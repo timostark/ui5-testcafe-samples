@@ -7,7 +7,8 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
-      - name: Run tests
-        uses: DevExpress/testcafe-action@latest
+      - uses: actions/setup-node@v2
         with:
-            args: "chrome e2e_simple/first.ts"
+          node-version: '10'
+      - run: npm install
+      - run: npm test

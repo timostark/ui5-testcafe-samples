@@ -4,7 +4,7 @@
     "description": "Examples for Running testcafe with ui5",
     "main": "index.js",
     "scripts": {
-        "e2e": "testcafe"
+        "e2e": "testcafe ./e2e_test/tests/**"
     },
     "author": "",
     "license": "ISC",

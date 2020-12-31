@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '10'
-      - run: npm install
+      - run: npm run npmi
       - run: npm run e2e

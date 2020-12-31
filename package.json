@@ -4,7 +4,7 @@
     "description": "Examples for Running testcafe with ui5",
     "main": "index.js",
     "scripts": {
-        "e2e": "testcafe ./e2e_test/tests/**"
+        "e2e": "cd ./e2e_test && testcafe \"chrome:headless --start-maximized\" ./tests/**"
     },
     "author": "",
     "license": "ISC",

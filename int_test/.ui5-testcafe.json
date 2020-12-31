@@ -1,0 +1,15 @@
+{
+    "coverage": {
+        "log": false,
+        "proxy": false,
+        "basePath": "",
+        "type": "html",
+        "debugComponents": [],
+        "includePaths": [],
+        "excludePaths": [
+            "/resources"
+        ]
+    },
+    "firstSelectorTimeout": 60000,
+    "traceSelectorOnFailure": false
+}

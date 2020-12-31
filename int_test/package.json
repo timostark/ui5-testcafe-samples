@@ -4,7 +4,8 @@
   "author": "SAP SE",
   "description": "UI5 Demo App - Shopping cart",
   "scripts": {
-    "e2e": "testcafe ./webapp/test/testcafe/** --app \"ui5 serve --h2 --config webapp/test/testcafe/ui5.yaml\""
+    "int-test": "concurrently --success first --kill-others  \"ui5 serve --h2\" \"wait-on https://localhost:8443&&testcafe ./webapp/test/testcafe/**\"",
+    "int-test-cov": "concurrently --success first --kill-others  \"SET UI5_COVERAGE_ENABLED=true&&ui5 serve --h2 \" \"SET UI5_COVERAGE_ENABLED=true&&wait-on https://localhost:8443&&testcafe ./webapp/test/testcafe/**\""
   },
   "devDependencies": {
     "testcafe": "1.9.4",
@@ -12,8 +13,10 @@
     "testcafe-reporter-xunit": "^2.1.0",
     "typescript": "^4.0.3",
     "ui5-middleware-simpleproxy": "^0.4.1",
-    "ui5-middleware-testcafe-coverage": "0.0.2",
-    "ui5-testcafe-selector-utils": "0.0.134"
+    "ui5-middleware-testcafe-coverage": "0.0.5",
+    "ui5-testcafe-selector-utils": "0.0.202",
+    "concurrently": "^5.3.0",
+    "wait-on": "^5.2.1"
   },
   "dependencies": {
     "@ui5/cli": "^2.4.5"

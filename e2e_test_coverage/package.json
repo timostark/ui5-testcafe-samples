@@ -14,6 +14,6 @@
         "testcafe-reporter-ui5-coverage": "0.0.9"
     },
     "dependencies": {
-        "ui5-testcafe-selector-utils": "0.0.199"
+        "ui5-testcafe-selector-utils": "0.0.200"
     }
 }

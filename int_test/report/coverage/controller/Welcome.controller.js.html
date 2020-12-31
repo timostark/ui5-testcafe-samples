@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.64% </span>
+                <span class="strong">72.73% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/44</span>
+                <span class='fraction'>32/44</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">68.75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/16</span>
+                <span class='fraction'>11/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.54% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/13</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.64% </span>
+                <span class="strong">72.73% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/44</span>
+                <span class='fraction'>32/44</span>
             </div>
         
             
@@ -259,16 +259,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -292,12 +292,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -413,13 +413,13 @@
 			var sRouteName = oEvent.getParameter("name");
 &nbsp;
 			// always display two columns for home screen
-			<span class="missing-if-branch" title="else path not taken" >E</span>if (sRouteName === "home") {
+			if (sRouteName === "home") {
 				this._setLayout("Two");
 			}
 			// we do not need to call this function if the url hash refers to product or cart product
-			<span class="missing-if-branch" title="else path not taken" >E</span>if (sRouteName !== "product" &amp;&amp; sRouteName !== "cartProduct") {
+			if (sRouteName !== "product" &amp;&amp; sRouteName !== "cartProduct") {
 				var aPromotedData = this.getView().getModel("view").getProperty("/Promoted");
-				<span class="missing-if-branch" title="else path not taken" >E</span>if (!aPromotedData.length) {
+				if (!aPromotedData.length) {
 					var oModel = this.getModel();
 					Object.keys(this._mFilters).forEach(function (sFilterKey) {
 						oModel.read("/FeaturedProducts", {
@@ -444,11 +444,11 @@
 		 */
 		onCarouselPageChanged: function () {
 			clearTimeout(this._iCarouselTimeout);
-			this._iCarouselTimeout = setTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction () {
-				var oWelcomeCarousel = <span class="cstat-no" title="statement not covered" >this.byId("welcomeCarousel");</span>
-<span class="cstat-no" title="statement not covered" >				if (oWelcomeCarousel) {</span>
-<span class="cstat-no" title="statement not covered" >					oWelcomeCarousel.next();</span>
-<span class="cstat-no" title="statement not covered" >					this.onCarouselPageChanged();</span>
+			this._iCarouselTimeout = setTimeout(function () {
+				var oWelcomeCarousel = this.byId("welcomeCarousel");
+				<span class="missing-if-branch" title="else path not taken" >E</span>if (oWelcomeCarousel) {
+					oWelcomeCarousel.next();
+					this.onCarouselPageChanged();
 				}
 			}.bind(this), this._iCarouselLoopTime);
 		},
@@ -517,7 +517,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Dec 21 2020 20:59:09 GMT+0100 (GMT+01:00)
+                at Wed Dec 30 2020 22:13:29 GMT+0100 (GMT+01:00)
             </div>
         </div>
         <script src="../prettify.js"></script>

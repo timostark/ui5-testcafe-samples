@@ -2,6 +2,7 @@
     "coverage": {
         "enabled": true,
         "log": true,
+        "proxy": true,
         "basePath": "/test-resources/sap/m/demokit/cart/webapp",
         "type": "html",
         "debugComponents": [
